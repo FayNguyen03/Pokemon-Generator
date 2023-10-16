@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/pokemonImage"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="120dp"
+        android:contentDescription="@string/pokemon_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <Button
+        android:id="@+id/buttonRandom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/random"
+        app:layout_constraintEnd_toEndOf="@id/pokemonImage"
+        app:layout_constraintStart_toStartOf="@id/pokemonImage"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <Button
+        android:id="@+id/buttonSelection"
+        android:layout_width="320dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/already_had_a_choice"
+        app:layout_constraintEnd_toEndOf="@id/buttonRandom"
+        app:layout_constraintStart_toStartOf="@id/buttonRandom"
+        app:layout_constraintTop_toBottomOf="@id/buttonRandom" />
+
+    <EditText
+        android:id="@+id/userInputName"
+        android:layout_width="320dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="@string/user_input"
+        app:layout_constraintStart_toStartOf="@id/buttonSelection"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSelection" />
+
+    <TextView
+        android:id="@+id/namePoke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="170dp"
+        android:text=""
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <ScrollView
+        android:id="@+id/scrollAttribute"
+        android:layout_width="184dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="A scroll list of abilities"
+        android:labelFor="@id/attributeLayout"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage">
+
+        <LinearLayout
+            android:id="@+id/attributeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/abilitiesText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:text="ABILITIES"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/pokemonImage"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TYPE"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/abilitiesText"
+        app:layout_constraintTop_toBottomOf="@id/scrollAttribute" />
+
+    <TextView
+        android:id="@+id/abilitiesText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="40dp"
+        android:text="ORIGINAL ARTWORK"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/abilitiesText"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage" />
+
+    <ImageView
+        android:id="@+id/artwork"
+        android:layout_width="103dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scrollAttribute"
+        app:layout_constraintTop_toBottomOf="@+id/pokemonImage"
+        app:srcCompat="@android:drawable/divider_horizontal_bright" />
+
+    <TextView
+        android:id="@+id/typeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/type"
+        app:layout_constraintTop_toBottomOf="@+id/type"
+        android:textSize="20dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

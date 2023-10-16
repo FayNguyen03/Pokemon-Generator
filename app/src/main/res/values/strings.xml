@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Pokemon</string>
+    <string name="random">Do you know which Pokemon will be a good fit to you?</string>
+    <string name="pokemon_description">Pokemon Description</string>
+    <string name="user_input">Pokemon Name</string>
+    <string name="already_had_a_choice">Already had a choice?</string>
+</resources>
